@@ -2,18 +2,19 @@ body {
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+	height: 100%;
 }
+
 
 header, footer {
 	background-color: #009EDB;
 	width: 800px;
 }
 
-footer {
-	position: fixed;
-	bottom: 0;
-	margin: 0;
-}
+header {
+	position: relative;
+	top: -10px;
+}		
 
 footer p {
 	text-align: center;
