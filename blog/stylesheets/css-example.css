@@ -1,0 +1,25 @@
+.ex1 {
+	width: 100px;
+	text-align: center;
+}
+
+.ex2 {
+	width: 100px;
+	background-color: lightgray;
+	text-align: center;
+}
+
+.ex3 {
+	width: 100px;
+	background-color: lightgray;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.ex4 {
+	width: 100px;
+	background-color: lightgray;
+	text-align: center;
+	border: 1px solid black;
+	margin: 10px;
+}
