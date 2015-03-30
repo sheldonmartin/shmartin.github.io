@@ -1,0 +1,65 @@
+main {
+	font-family: sans-serif;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	height: 500px;
+}
+
+footer {
+	text-align: center;
+}		
+
+footer a {
+	margin: 10px;	
+}
+
+a {
+	color: black;
+	font-family: sans-serif;
+}
+
+td a:hover {
+	color: gray;
+}
+
+footer a:hover {
+	color: gray;
+}
+
+
+a:visited {
+	color: black;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #009EDB;
+}
+
+
+
+h2, h4 {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: gray;
+}
+
+table {
+	width: 100%;	
+}
+
+td {
+	width: 400px;
+}
+
+.sub-title {
+	text-align: left;
+	color: #009EDB;
+}
