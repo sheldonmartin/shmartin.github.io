@@ -3,103 +3,115 @@
   <head>
     <title>Sheldon's Blog</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/new_default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-code.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <header>
-      <h1 class="header">Arrays and Hashes</h1>
-    </header>
+    <div id="container">
+      <nav>
+        <a href="../index.html">About Me</a>
+        <a href="index.html">Blog</a>
+        <a href="#">Projects</a>
+      </nav>
 
-    <main>
-      <h2>When and how to use them</h2>
-      <h4>2015-04-04</h4>
+      <main>
+        <h1>Arrays and Hashes</h1>
+        <h2>When and how to use them</h2>
+        <h4 id="date">2015-04-04</h4>
 
-      <section>
-        <h4 class="sub-title">Arrays</h4>
-        <p>
-          An array is pretty much a list of objects. Think of a shopping list. You put items on it that you want to remember to buy at the grocery store. Arrays in Ruby serve a similar purpose, they are there to store a list of related items. If you wanted to create an empty array in Ruby, you'd use the following code:
-        </p>
-
-        <code><p>shopping_list = []</p></code>
-
-        <p>To add items to that list, you'd use either one of the following lines of code:</p>
-
-        <code>
+        <section>
+          <h4>Arrays</h4>
           <p>
-            <span>shopping_list << 'apple'</span>
-            <span>shopping_list.push('orange')</span>
+            An array is pretty much a list of objects. Think of a shopping list. You put items on it that you want to remember to buy at the grocery store. Arrays in Ruby serve a similar purpose, they are there to store a list of related items. If you wanted to create an empty array in Ruby, you'd use the following code:
           </p>
-        </code>
 
-        <p>
-          Each item in a an array can be accessed using its index. Array indexes start at 0, and can be used by putting square brackets next to the array name, with the index number in between. The following code will print out the first item we put in the array:
-        </p>
+          <code><p>shopping_list = []</p></code>
 
-        <code>
+          <p>To add items to that list, you'd use either one of the following lines of code:</p>
+
+          <code>
+            <p>
+              <span>shopping_list << 'apple'</span>
+              <span>shopping_list.push('orange')</span>
+            </p>
+          </code>
+
           <p>
-            <span>puts shopping_list[0]</span>
-            <span>=> apple</span>
+            Each item in a an array can be accessed using its index. Array indexes start at 0, and can be used by putting square brackets next to the array name, with the index number in between. The following code will print out the first item we put in the array:
           </p>
-        </code>
 
-        <p>This code will get you the second item in the array:</p>
-        <code>
+          <code>
+            <p>
+              <span>puts shopping_list[0]</span>
+              <span>=> apple</span>
+            </p>
+          </code>
+
+          <p>This code will get you the second item in the array:</p>
+          <code>
+            <p>
+              <span>puts shopping_list[1]</span>
+              <span>=> orange</span>
+            </p>
+          </code>
+
+          <p>In order to change the value of an array, you'd use the following code:</p>
+          <code>
+            <p>
+              <span>shopping_list[0] = 'apple juice'</span>
+              <span>puts shopping_list[0]</span>
+              <span>=> apple juice</span>
+            </p>
+          </code>
+
+          <h4>Hashes</h4>
           <p>
-            <span>puts shopping_list[1]</span>
-            <span>=> orange</span>
+            Hashes are a lot like arrays, they are list of related objects. The major difference between an array and a hash, is in the way hashes store their objects. In a hash, objects are stored as key-value pairs. The key is used to identify a specific object in a hash, similar to arrays. But keys in hashes don't have to be numbers, they can also be strings. Lets take that same grocery list. What if you wanted to not only store the items, but the amount of each item you needed to buy. To create an empty hash, you'd use the following code:
           </p>
-        </code>
 
-        <p>In order to change the value of an array, you'd use the following code:</p>
-        <code>
-          <p>
-            <span>shopping_list[0] = 'apple juice'</span>
-            <span>puts shopping_list[0]</span>
-            <span>=> apple juice</span>
-          </p>
-        </code>
+          <code><p>shopping_list = {}</p></code>
 
-        <h4 class="sub-title">Hashes</h4>
-        <p>
-          Hashes are a lot like arrays, they are list of related objects. The major difference between an array and a hash, is in the way hashes store their objects. In a hash, objects are stored as key-value pairs. The key is used to identify a specific object in a hash, similar to arrays. But keys in hashes don't have to be numbers, they can also be strings. Lets take that same grocery list. What if you wanted to not only store the items, but the amount of each item you needed to buy. To create an empty hash, you'd use the following code:
-        </p>
+          <p>Now to assign items to that list, you'd do this:</p>
 
-        <code><p>shopping_list = {}</p></code>
+          <code>
+            <p>
+              <span>shopping_list['apple'] = 5 </span>
+              <span>shopping_list['orange'] = 3 </span>
+            </p>
+          </code>
 
-        <p>Now to assign items to that list, you'd do this:</p>
+         <p>If you want to see the value assigned to a key. You'd use syntax similar to an array, but instead of using the index, you use the key. In our example, this would get you the amount of the item you need to buy.</p>
 
-        <code>
-          <p>
-            <span>shopping_list['apple'] = 5 </span>
-            <span>shopping_list['orange'] = 3 </span>
-          </p>
-        </code>
+          <code>
+            <p>
+              <span>puts shopping_list['apple']</span>
+              <span>=> 5</span>
+            </p>
+          </code>
 
-       <p>If you want to see the value assigned to a key. You'd use syntax similar to an array, but instead of using the index, you use the key. In our example, this would get you the amount of the item you need to buy.</p>
+          <p>If you wanted to see if a hash has a certain key (perhaps you forgot if you put it on your list or not). You can use the "has_key?" method to check.</p>
 
-        <code>
-          <p>
-            <span>puts shopping_list['apple']</span>
-            <span>=> 5</span>
-          </p>
-        </code>
+          <code>
+            <p>
+              <span>puts shopping_list.has_key?('banana')</span>
+              <span>=> false</span>
+            </p>
+          </code>
 
-        <p>If you wanted to see if a hash has a certain key (perhaps you forgot if you put it on your list or not). You can use the "has_key?" method to check.</p>
+          <p>If you need to reference a list by using a string instead of an integer, or if speed is a concern (hashes tend to have faster performance than arrays), you're better off using a hash. But the simplicity of arrays, make them a good choice when first starting to use data structures.
+        </section>
+      </main>
 
-        <code>
-          <p>
-            <span>puts shopping_list.has_key?('banana')</span>
-            <span>=> false</span>
-          </p>
-        </code>
-
-        <p>If you need to reference a list by using a string instead of an integer, or if speed is a concern (hashes tend to have faster performance than arrays), you're better off using a hash. But the simplicity of arrays, make them a good choice when first starting to use data structures.
-      </section>
-    </main>
-
-    <footer>
-      <p>By Sheldon Martin</p>
-    </footer>
+      <footer>
+          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
+          <a href="https://github.com/shmartin">GitHub</a>|
+          <a href="https://twitter.com/sheld0ri">Twitter</a>|
+          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
+          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
+      </footer>
+    </div>
   </body>
 </html>

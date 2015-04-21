@@ -3,64 +3,74 @@
   <head>
     <title>Sheldon's Blog</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/blog-stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/css-example.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/t2-css-design.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <header>
-      <h1 class="header">CSS Design</h1>
-    </header> 
+    <div id="container">
+      <nav>
+        <a href="../index.html">About Me</a>
+        <a href="index.html">Blog</a>
+        <a href="#">Projects</a>
+      </nav>
 
-    <main>
-      <h2>The difference between Margin, Border, and Padding</h2>
-      <h4>2015-03-29</h4>
+      <main>
+        <h1>CSS Design</h1>
+        <h2>The difference between Margin, Border, and Padding</h2>
+        <h4 id="date">2015-03-29</h4>
 
-      <section>
-        <h4 class="sub-title"><!-- Sub Title --></h4>
-        <p>
-          When you use an HTML element, it actually consist of multiple layers embedded inside of each other, sort of like an onion. The core of the element is the content, this is the text or maybe image you're putting in your tag. Below is an example of two div elements sitting on top of each other. Right now the only thing visible, are the words inside the div element.
-        </p>
+        <section>
+          <h4 class="sub-title"><!-- Sub Title --></h4>
+          <p>
+            When you use an HTML element, it actually consist of multiple layers embedded inside of each other, sort of like an onion. The core of the element is the content, this is the text or maybe image you're putting in your tag. Below is an example of two div elements sitting on top of each other. Right now the only thing visible, are the words inside the div element.
+          </p>
 
-        <p class="sub-title">Example 1:</p>
-        <div class="ex1">div element</div>
-        <div class="ex1">div element</div>
+          <p class="sub-title">Example 1:</p>
+          <div class="ex1">div element</div>
+          <div class="ex1">div element</div>
 
-        <h4 class="sub-title"><!-- Sub Title --></h4>
-        <p>
-          Next comes the padding. The padding is wrapped around the content, it's the area where the background color would go for that element. In the example below, I've made the padding visible by changing the div's background color to "lightgray".
-        </p>
+          <h4 class="sub-title"><!-- Sub Title --></h4>
+          <p>
+            Next comes the padding. The padding is wrapped around the content, it's the area where the background color would go for that element. In the example below, I've made the padding visible by changing the div's background color to "lightgray".
+          </p>
 
-        <p class="sub-title">Example 2:</p>
-        <div class="ex2">div element</div>
-        <div class="ex2">div element</div>
+          <p class="sub-title">Example 2:</p>
+          <div class="ex2">div element</div>
+          <div class="ex2">div element</div>
 
-        <h4 class="sub-title"><!-- Sub Title --></h4>
-        <p>
-          Wrapped around the padding is the border. The border can provide an outline for that element. It can be colored and styled in various ways, such as solid, dashed or dotted. W3Schools has some examples<a href="http://www.w3schools.com/css/css_border.asp">here</a>. In this example, i've colored the border black and made it a solid line 1 pixel thick.
-        </p>
+          <h4 class="sub-title"><!-- Sub Title --></h4>
+          <p>
+            Wrapped around the padding is the border. The border can provide an outline for that element. It can be colored and styled in various ways, such as solid, dashed or dotted. W3Schools has some examples <a href="http://www.w3schools.com/css/css_border.asp">here</a>. In this example, i've colored the border black and made it a solid line 1 pixel thick.
+          </p>
 
-		<p class="sub-title">Example: 3</p>
-        <div class="ex3">div element</div>
-        <div class="ex3">div element</div>
+          <p class="sub-title">Example: 3</p>
+          <div class="ex3">div element</div>
+          <div class="ex3">div element</div>
 
-        <p>
-          Finally, on top of all those layers is the margin. It's an invisible layer that's used to separate other elements from your element's border. I'll give the margin a size of 10 pixels, so you can see it.
-        </p>
+          <p>
+            Finally, on top of all those layers is the margin. It's an invisible layer that's used to separate other elements from your element's border. I'll give the margin a size of 10 pixels, so you can see it.
+          </p>
 
-        <p class="sub-title">Example: 4</p>
-        <div class="ex4">div element</div>
-        <div class="ex4">div element</div>
+          <p class="sub-title">Example: 4</p>
+          <div class="ex4">div element</div>
+          <div class="ex4">div element</div>
 
-        <p>
-          As you can see, increasing the margin not only put distance between the two div elements, but moved them to the right since margin exist on all sides.
-        </p>
-      </section>
-    </main>
+          <p>
+            As you can see, increasing the margin not only put distance between the two div elements, but moved them to the right since margin exist on all sides.
+          </p>
+        </section>
+      </main>
 
-    <footer>
-      <p>By Sheldon Martin</p>
-    </footer>
+      <footer>
+          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
+          <a href="https://github.com/shmartin">GitHub</a>|
+          <a href="https://twitter.com/sheld0ri">Twitter</a>|
+          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
+          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
+      </footer>
+    </div>
   </body>
-</html> 
+</html>

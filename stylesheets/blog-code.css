@@ -1,0 +1,16 @@
+code {
+	text-indent: 1em;
+	color: gray;
+}
+
+code p {
+	width: 350px;
+	margin-left: 1em;	
+	/*background-color: gray;*/
+	border: 1px solid lightgray;
+	padding: 1em 0 1em 0;
+}
+	
+span {
+	display: block;
+}
