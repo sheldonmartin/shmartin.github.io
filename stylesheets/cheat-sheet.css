@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+  font-family: Quicksand;
+}
+
+header {
+  text-align: center;
+}
+
+div.topic {
+  text-align: center;
+  background-color: #2F51BC;
+  padding: 0.5em;
+}
+
+h2 {
+  color: white;
+}
+
+section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+  margin: 40px 0px 40px 0px;
+}
+
+footer {
+  text-align: center;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sheldon's Blog</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/cheat-sheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header>
+      <h1>Ruby Cheatsheet</h1>
+    </header>
+
+    <main>
+      <div class="topic">
+        <h2>Integers</h2>
+      </div>
+      <section>
+        <p>
+          Ruby integers are whole numbers, like 1, 2, and 3. They work with the common arithmetic operators for addition (+), subtraction (-), division (/), and multiplication (*). There is also one more operator called modulo (%), which returns the remainder between two values. Below is an example of how to use integers with arithmetic operators.
+        </p>
+        <p>
+          <script src="https://gist.github.com/achen116/2864b59895666352d688.js"></script>    
+        </p>
+      </section>
+   
+      <div class="topic">
+        <h2>Strings</h2>
+      </div>
+      <section>
+        <p>
+          A String object holds and manipulates an arbitrary sequence of bytes, typically representing characters. String objects may be created using String::new or as literals.
+        </p>
+        <p><script src="https://gist.github.com/shmartin/60369005c25de289672b.js"></script></p>
+      </section>
+
+      <div class="topic">
+        <h2>Arrays</h2>
+      </div>      
+      <section>
+        <p>
+          Arrays are ordered, integer-indexed collections of any object. Array indexing starts at 0, as in C or Java. A negative index is assumed to be relative to the end of the array---that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on. A new array can be created by using the literal constructor []. Arrays can contain different types of objects. For example, the array below contains an Integer, a String and a Float:
+        </p>
+        <p><script src="https://gist.github.com/achen116/b1be0e063446202973f8.js"></script></p>
+        <p>
+          Elements in an array can be retrieved using the #[] method. It can take a single integer argument (a numeric index), a pair of arguments (start and length) or a range. Negative indices start counting from the end, with -1 being the last element.
+        </p>
+        <p><script src="https://gist.github.com/achen116/5a06059355d2cb8944aa.js"></script></p>
+        <p>
+          See below for some examples of common array methods.
+        </p>
+        <p><script src="https://gist.github.com/achen116/ebc5ca6883f1dc0132e3.js"></script></p>
+      </section>
+        
+      <div class="topic">
+        <h2>Hashes</h2>
+      </div>
+      <section>
+        <p>
+          A Hash is a dictionary-like collection of unique keys and their values. Also called associative arrays, they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type.
+            Hashes enumerate their values in the order that the corresponding keys were inserted.
+
+        </p>
+        <p>
+         <script src="https://gist.github.com/shmartin/4f1ffc7c946d7a4ada6b.js"></script>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Descriptions and examples referenced from:
+        <br/>
+        <cite><a href="http://ruby-doc.org/">Ruby-Doc.org: Documenting the Ruby Language</a></cite>
+      </p>
+    </footer>
+  </body>
+</html>
