@@ -1,0 +1,16 @@
+main {
+	text-align: center;
+}
+
+a {
+   color: #0099CC;
+   text-decoration: none;
+}
+                     
+a:visited {
+   color: #0099CC;
+}
+
+a:hover {
+   color: black;
+}
