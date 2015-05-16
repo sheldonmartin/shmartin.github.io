@@ -14,19 +14,15 @@ body {
 
 nav {
    position: fixed;
-   /*padding:10px;*/
-
+   padding: 1px 0px;
    width: 100%;
    /*background-color: #333333;*/
+   background-color: black;
    text-align: center;
    font-size: 1.5em;
    font-family: Lato;
    font-weight: bold;
    box-shadow: 10px 10px 5px #888888;
-   /*border: 3px solid black;*/
-
-   padding: 3px 0px;
-   background-color: black;
 }
 
 nav div {
@@ -36,8 +32,7 @@ nav div {
 }
 
 nav a {
-   margin-left : 1em;
-   margin-right: 1em;
+   margin: 0em 1em;
    color: white;
    text-decoration: none;
 }
@@ -47,30 +42,23 @@ nav a:visited {
 }
 
 nav a:hover {
-   color: #0099CC;
+   color: #0099CC;   
 }
 
 main {
    padding: 50px 25px;
-   /*padding-top: 50px;*/
-   /*padding-bottom: 50px;*/
-   /*padding-bottom: 60px;*/
-
    width: 700px;
-   min-height: 100%;    
-   /*height: 100%;*/
-   margin-left: auto;
-   margin-right: auto;
-   /*margin-top: 4em;*/
+   min-height: 100%;
+   margin: 0px auto;
    background-color: white;
-   border: 3px solid black;
+   border: 1px solid black;
 }
 
 h1, h2 {
    text-align: center;
 }
 
-h1 {
+h1, h4 {
    color: #0099CC;
 }
 
@@ -79,36 +67,17 @@ h1 {
    color: black;
 }
 
-h4 {
-   color: #0099CC;
-}
-
 footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-
-   /*bottom: 0;*/
-   /*margin: 0;*/
-   /*width: 100%;*/
+   position: absolute;
+   padding: 1px 0px;
+   bottom: 0;
+   width: 100%;
    text-align: center;
    /*background-color: #0066FF;*/
    /*background-color: #1975FF;*/
-   background-color: #333333;
-   font-family: Lato;   
-}
-
-/*footer {
-   padding: 5px 0px;
-   color: #0099CC;
-   border: 3px solid black;
-}
-*/
-footer {
-   /*padding: 3px;*/
-   padding: 3px 0px;
+   /*background-color: #333333;*/
    background-color: black;
-   /*color: #0099CC;*/
+   font-family: Lato;   
 }
 
 footer div {
@@ -128,7 +97,7 @@ footer a {
 }
                      
 footer a:visited {
-   /*color: #0099CC;*/
+   color: black;
 }
 
 footer a:hover {
@@ -144,4 +113,3 @@ footer a:hover {
    height: 10px;
    background-color: #333333;
 }
-
