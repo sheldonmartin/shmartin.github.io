@@ -37,7 +37,7 @@ main {
    margin: 0px auto;
    padding: 60px 25px 25px 25px;
    width: 700px;  
-   min-height: 86.9%;
+   min-height: 86%;
    background-color: white;
    border-left: 1px solid black;
    border-right: 1px solid black;
@@ -61,7 +61,7 @@ footer {
    padding: 5px 0px;
    bottom: 0;
    width: 100%;
-   min-height: 13.1%;
+   min-height: 14%;
    /*min-height: 10%;*/
    text-align: center;
    background-color: #0099CC;
