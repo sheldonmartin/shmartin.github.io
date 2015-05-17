@@ -1,34 +1,22 @@
 html,
 body {
-   margin:0;
-   padding:0;
-   height:100%;
+   margin: 0;
+   height: 100%;
    font-family: Raleway;
    background-color: #F2F2F2;
 }
 
-#container {
-   min-height:100%;
-   position:relative;
-}
-
 nav {
    position: fixed;
-   padding: 1px 0px;
+   padding: 10px 0;
    width: 100%;
-   /*background-color: #333333;*/
-   background-color: black;
+   background-color: #494949;
    text-align: center;
    font-size: 1.5em;
    font-family: Lato;
    font-weight: bold;
+   border-bottom: 1px solid black;
    box-shadow: 10px 10px 5px #888888;
-}
-
-nav div {
-   padding: 5px;
-   /*background-color: #333333;*/
-   background-color: #494949;
 }
 
 nav a {
@@ -43,15 +31,16 @@ nav a:visited {
 
 nav a:hover {
    color: #0099CC;   
-}
+}  
 
 main {
-   padding: 50px 25px;
-   width: 700px;
-   min-height: 100%;
    margin: 0px auto;
+   padding: 60px 25px 25px 25px;
+   width: 700px;  
+   min-height: 86.9%;
    background-color: white;
-   border: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
 }
 
 h1, h2 {
@@ -68,30 +57,21 @@ h1, h4 {
 }
 
 footer {
-   position: absolute;
-   padding: 1px 0px;
+   margin: 0px;
+   padding: 5px 0px;
    bottom: 0;
    width: 100%;
+   min-height: 13.1%;
+   /*min-height: 10%;*/
    text-align: center;
-   /*background-color: #0066FF;*/
-   /*background-color: #1975FF;*/
-   /*background-color: #333333;*/
-   background-color: black;
-   font-family: Lato;   
-}
-
-footer div {
-   padding: 2px;
-   /*background-color: #494949;*/
-   /*background-color: #7F7F7F;*/
    background-color: #0099CC;
+   font-family: Lato;
+   border-top: 1px solid black;
 }
 
 footer a {
    font-size: 1.25em;
-   margin-left : 1em;
-   margin-right: 1em;
-   /*color: #0099CC;*/
+   margin: 0 1em;
    color: black;
    text-decoration: none;
 }
@@ -101,7 +81,6 @@ footer a:visited {
 }
 
 footer a:hover {
-   /*color: #0099CC;*/
    color: white;
 }
 
