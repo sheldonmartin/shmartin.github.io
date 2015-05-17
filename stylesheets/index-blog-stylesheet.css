@@ -1,19 +1,19 @@
-table {
-	margin-left: auto;
-	margin-right: auto;
+main {
+   text-align: center;
 }
 
-a {
+main a {
+   display: block;
    margin-left : 1em;
    margin-right: 1em;
    color: black;
    text-decoration: none;
 }
                      
-a:visited {
+main a:visited {
    color: black;
 }
 
-a:hover {
+main a:hover {
    color: #0099CC;
 }
