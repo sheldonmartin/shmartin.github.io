@@ -5,70 +5,69 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/t5-ruby-classes.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div id="container">
-      <nav>
-        <a href="../index.html">About Me</a>
-        <a href="index.html">Blog</a>
-        <a href="#">Projects</a>
-      </nav>
+    <nav>
+      <a href="../index.html">About Me</a>
+      <a href="index.html">Blog</a>  
+      <a href="../projects.html">Projects</a>
+    </nav>
 
-      <main>
-        <h1>Ruby Classes</h1>
-        <h2>How to design a class</h2>
-        <h4 id="date">2015-04-19</h4>
+    <main>
+      <h1>Ruby Classes</h1>
+      <h2>How to design a class</h2>
+      <h4 id="date">2015-04-19</h4>
 
-        <section>
-          <h4 class="sub-title"></h4>
-          <p>
-            Classes in Ruby are used to model real life objects. You’ll start to see the need to use classes as your Ruby programs get more complicated. For instance, you can model a dog using a ruby class. It’s a good example to demonstrate a class, because just about everyone knows what a dog is, and what it can do. However, we’re not going to do that, because dogs are boring. But you know what’s similar to a dog, and a lot more interesting? A wolf :-) Why? Because wolves live in the wild and they hunt, and they’re damn good at it (for reference watch “The Grey” starring Liam Neeson). So lets use that instead.
-          </p>
+      <section>
+        <h4 class="sub-title"></h4>
+        <p>
+          Classes in Ruby are used to model real life objects. You’ll start to see the need to use classes as your Ruby programs get more complicated. For instance, you can model a dog using a ruby class. It’s a good example to demonstrate a class, because just about everyone knows what a dog is, and what it can do. However, we’re not going to do that, because dogs are boring. But you know what’s similar to a dog, and a lot more interesting? A wolf :-) Why? Because wolves live in the wild and they hunt, and they’re damn good at it (for reference watch “The Grey” starring Liam Neeson). So lets use that instead.
+        </p>
 
-          <p>
-            We need to keep track of the specific attributes of a wolf. Those attributes will be our instance variables. We’ll need to keep track of the wolf’s breed, age, and name (not sure if wolves have names, but lets give them one anyway). These are good examples of instance variables, because they are identifying characteristics of a specific wolf. We might also want to know which pack the wolf belongs to, so lets create a variable for that as well.
-          </p>
+        <p>
+          We need to keep track of the specific attributes of a wolf. Those attributes will be our instance variables. We’ll need to keep track of the wolf’s breed, age, and name (not sure if wolves have names, but lets give them one anyway). These are good examples of instance variables, because they are identifying characteristics of a specific wolf. We might also want to know which pack the wolf belongs to, so lets create a variable for that as well.
+        </p>
 
-          <p>name, age, breed, pack</p>
+        <p>name, age, breed, pack</p>
 
-          <p>
-            The next thing we need, are instance methods. These methods will describe the types of actions that the wolf class will preform. Wolves howl, there are a couple reasons why, but one of them is for calling other members of their pack. They also need to hunt for their own food, since they live in the wild. Once they get that food, they need to eat it. So we now have three actions that wolves need to preform.
-          </p>
-          
-          <p>howl, hunt, eat</p>
+        <p>
+          The next thing we need, are instance methods. These methods will describe the types of actions that the wolf class will preform. Wolves howl, there are a couple reasons why, but one of them is for calling other members of their pack. They also need to hunt for their own food, since they live in the wild. Once they get that food, they need to eat it. So we now have three actions that wolves need to preform.
+        </p>
+        
+        <p>howl, hunt, eat</p>
 
-          <p>
-            Now what if we wanted to know how many instances of the wolf class exist at a given time. In order to do that we’d need a class variable to keep track of the number of wolves. We’d also need a class method that increments the wolf counter each time a new wolf object is created.
-          <p>
-          
-          <p>population, increment_population</p>
+        <p>
+          Now what if we wanted to know how many instances of the wolf class exist at a given time. In order to do that we’d need a class variable to keep track of the number of wolves. We’d also need a class method that increments the wolf counter each time a new wolf object is created.
+        <p>
+        
+        <p>population, increment_population</p>
 
-          <p>
-            One way to know when a wolf is created, is when it’s initialize method is called. So we’ll create an initialize method that calls the increment_population method. So our wolf class now looks like this: 
-          </p>
+        <p>
+          One way to know when a wolf is created, is when it’s initialize method is called. So we’ll create an initialize method that calls the increment_population method. So our wolf class now looks like this: 
+        </p>
 
-          <p><span>Wolf Class<span><p>
-          <p><span>Instance Variables:</span> name, age, breed, pack</p>
-          <p><span>Instance Methods:</span> initialize, howl, hunt, eat</p>
-          <p><span>Class Variable:</span> population</p>
-          <p><span>Class Method:</span> increment_population</p>
+        <p><span>Wolf Class<span><p>
+        <p><span>Instance Variables:</span> name, age, breed, pack</p>
+        <p><span>Instance Methods:</span> initialize, howl, hunt, eat</p>
+        <p><span>Class Variable:</span> population</p>
+        <p><span>Class Method:</span> increment_population</p>
 
-          <p>
-            You can use a similar train of thought to create classes for other types of objects. Just keep in mind the characteristics of the object (variables), and the actions it will perform (methods).
-          </p>
-        </section>
-      </main>
+        <p>
+          You can use a similar train of thought to create classes for other types of objects. Just keep in mind the characteristics of the object (variables), and the actions it will perform (methods).
+        </p>
+      </section>
+    </main>
 
-      <footer>
-          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
-          <a href="https://github.com/shmartin">GitHub</a>|
-          <a href="https://twitter.com/sheld0ri">Twitter</a>|
-          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
-          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
-      </footer>
-    </div>
+    <footer>
+      <a href="mailto:sheld0ri@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+      <a href="https://github.com/shmartin"><i class="fa fa-github-square fa-2x"></i></a>
+      <a href="https://twitter.com/sheld0ri"><i class="fa fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.facebook.com/sheldon.martin.397"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    </footer>
   </body>
 </html>

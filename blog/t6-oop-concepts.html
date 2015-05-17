@@ -6,104 +6,103 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-code.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/t6-oop-concepts.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div id="container">
-      <nav>
-        <a href="index.html">About Me</a>
-        <a href="blog/index.html">Blog</a>  
-        <a href="#">Projects</a>
-      </nav>
+    <nav>
+      <a href="../index.html">About Me</a>
+      <a href="index.html">Blog</a>  
+      <a href="../projects.html">Projects</a>
+    </nav>
 
-      <main>
-        <h1>Inheritance vs Composition</h1>
-        <h2><!-- sub-title --></h2>
-        <h4 id="date">2015-04-23</h4>
+    <main>
+      <h1>Inheritance vs Composition</h1>
+      <h2><!-- sub-title --></h2>
+      <h4 id="date">2015-04-23</h4>
 
-        <section>
-          <h4>Inheritance</h4>
+      <section>
+        <h4>Inheritance</h4>
+        <p>
+          Inheritance is when you have one class that is based on another class. For instance, if you created a class to represent an animal, you might then decide to create a dog class that is derived from the animal class. In Ruby, you'd do this by using the following code:
+        </p>
+
+        <code>
           <p>
-            Inheritance is when you have one class that is based on another class. For instance, if you created a class to represent an animal, you might then decide to create a dog class that is derived from the animal class. In Ruby, you'd do this by using the following code:
+            <span>def Animal</span>
+            <span class="indent1">def eat</span>
+            <span class="indent2">puts "Animal eats"</span>
+            <span class="indent1">end</span>
+            <br />
+            <span class="indent1">def sleep</span>
+            <span class="indent2">puts "Animal sleeps"</span>
+            <span class="indent1">end</span>
+            <span>end</span>
+            <span> </span>
+            <br />
+            <span>def Dog < Animal</span>
+            <span class="indent1">def bark</span>
+            <span class="indent2">puts "Dog Barks"</span>
+            <span class="indent1">end</span>
+            <span>end</span>
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>def Animal</span>
-              <span class="indent1">def eat</span>
-              <span class="indent2">puts "Animal eats"</span>
-              <span class="indent1">end</span>
-              <br />
-              <span class="indent1">def sleep</span>
-              <span class="indent2">puts "Animal sleeps"</span>
-              <span class="indent1">end</span>
-              <span>end</span>
-              <span> </span>
-              <br />
-              <span>def Dog < Animal</span>
-              <span class="indent1">def bark</span>
-              <span class="indent2">puts "Dog Barks"</span>
-              <span class="indent1">end</span>
-              <span>end</span>
-            </p>
-          </code>
+        <p>
+          The two classes now have an parent-child relationship. This is also known as an "is-a" relationship, Dog is-a type of Animal. The Dog class gains the methods defined in the Animal class, it does not need to define them on its own. It can also choose to override the methods in the Animal class, choosing its own implementation for those methods. Any new methods defined in Dog belong to it and any classes that may derive from it in the future. In Ruby, each child can only have one parent, but there are other languages that allow more than one parent, this is called multiple inheritance.
+        </p>
 
+        <h4>Composition</h4>
+        <p>
+          Composition is when you use instance variables that are actually other objects. So instead of inheriting methods from another class, you can simply create an instance of that class and call the methods that you need. You can more or less the same benefits of inheritance, with out having a parent-child relationship.
+        </p>
+
+        <code>
           <p>
-            The two classes now have an parent-child relationship. This is also known as an "is-a" relationship, Dog is-a type of Animal. The Dog class gains the methods defined in the Animal class, it does not need to define them on its own. It can also choose to override the methods in the Animal class, choosing its own implementation for those methods. Any new methods defined in Dog belong to it and any classes that may derive from it in the future. In Ruby, each child can only have one parent, but there are other languages that allow more than one parent, this is called multiple inheritance.
+            <span>def Animal</span>
+            <span class="indent1">def eat</span>
+            <span class="indent2">puts "Animal eats"</span>
+            <span class="indent1">end</span>
+            <br />
+            <span class="indent1">def sleep</span>
+            <span class="indent2">puts "Animal sleeps"</span>
+            <span class="indent1">end</span>
+            <span>end</span>
+            <span> </span>
+            <br />
+            <span>def Dog < Animal</span>
+            <span class="indent1">@animal = Animal.new</span>
+            <br />
+            <span class="indent1">def eat</span>
+            <span class="indent2">@animal.eat</span>
+            <span class="indent1">end</span>
+            <br />
+            <span class="indent1">def sleep</span>
+            <span class="indent2">@animal.sleep</span>
+            <span class="indent1">end</span>
+            <br />
+            <span class="indent1">def bark</span>
+            <span class="indent2">puts "Dog Barks"</span>
+            <span class="indent1">end</span>
+            <span>end</span>
           </p>
+        </code>
 
-          <h4>Composition</h4>
-          <p>
-            Composition is when you use instance variables that are actually other objects. So instead of inheriting methods from another class, you can simply create an instance of that class and call the methods that you need. You can more or less the same benefits of inheritance, with out having a parent-child relationship.
-          </p>
+        <h4>Which one to use?</h4>
+        <p>
+          With composition you have to write code to define the methods you want to use from another class. This means you need to write additional code, that wouldn't be necessary if you used inheritance. However, with inheritance you can't pick and choose which methods you want implemented, you have to take them all and override the ones you want changed. If you only want some methods (or maybe just a few) implemented from another class, you are probably better off using composition.
+        </p>
+      </section>
+    </main>
 
-          <code>
-            <p>
-              <span>def Animal</span>
-              <span class="indent1">def eat</span>
-              <span class="indent2">puts "Animal eats"</span>
-              <span class="indent1">end</span>
-              <br />
-              <span class="indent1">def sleep</span>
-              <span class="indent2">puts "Animal sleeps"</span>
-              <span class="indent1">end</span>
-              <span>end</span>
-              <span> </span>
-              <br />
-              <span>def Dog < Animal</span>
-              <span class="indent1">@animal = Animal.new</span>
-              <br />
-              <span class="indent1">def eat</span>
-              <span class="indent2">@animal.eat</span>
-              <span class="indent1">end</span>
-              <br />
-              <span class="indent1">def sleep</span>
-              <span class="indent2">@animal.sleep</span>
-              <span class="indent1">end</span>
-              <br />
-              <span class="indent1">def bark</span>
-              <span class="indent2">puts "Dog Barks"</span>
-              <span class="indent1">end</span>
-              <span>end</span>
-            </p>
-          </code>
-
-          <h4>Which one to use?</h4>
-          <p>
-            With composition you have to write code to define the methods you want to use from another class. This means you need to write additional code, that wouldn't be necessary if you used inheritance. However, with inheritance you can't pick and choose which methods you want implemented, you have to take them all and override the ones you want changed. If you only want some methods (or maybe just a few) implemented from another class, you are probably better off using composition.
-          </p>
-        </section>
-      </main>
-
-      <footer>
-          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
-          <a href="https://github.com/shmartin">GitHub</a>|
-          <a href="https://twitter.com/sheld0ri">Twitter</a>|
-          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
-          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
-      </footer>
-    </div>
+    <footer>
+      <a href="mailto:sheld0ri@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+      <a href="https://github.com/shmartin"><i class="fa fa-github-square fa-2x"></i></a>
+      <a href="https://twitter.com/sheld0ri"><i class="fa fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.facebook.com/sheldon.martin.397"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    </footer>
   </body>
 </html>

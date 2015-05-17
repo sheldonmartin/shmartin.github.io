@@ -5,101 +5,100 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-code.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div id="container">
-      <nav>
-        <a href="../index.html">About Me</a>
-        <a href="index.html">Blog</a>
-        <a href="#">Projects</a>
-      </nav>
+    <nav>
+      <a href="../index.html">About Me</a>
+      <a href="index.html">Blog</a>  
+      <a href="../projects.html">Projects</a>
+    </nav>
 
-      <main>
-        <h1>Enumerable Methods</h1>
-        <h2>When and how to use group_by</h2>
-        <h4 id="date">2015-04-12</h4>
+    <main>
+      <h1>Enumerable Methods</h1>
+      <h2>When and how to use group_by</h2>
+      <h4 id="date">2015-04-12</h4>
 
-        <section>
+      <section>
+        <p>
+          The group_by method from the Enumerable module, allows you to group together elements, based on a condition. For example, if you had a list of numbers, and you wanted to see which ones were even and which ones were odd, you could use the following code:
+        </p>
+
+        <code>
           <p>
-            The group_by method from the Enumerable module, allows you to group together elements, based on a condition. For example, if you had a list of numbers, and you wanted to see which ones were even and which ones were odd, you could use the following code:
+            <span>numbers = [1,2,3,4,5,6]</span>
+            <span>p numbers.group_by { |number| number%2 == 0}</span>
+            <span>{false=>[1, 3, 5], true=>[2, 4, 6]}
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>numbers = [1,2,3,4,5,6]</span>
-              <span>p numbers.group_by { |number| number%2 == 0}</span>
-              <span>{false=>[1, 3, 5], true=>[2, 4, 6]}
-            </p>
-          </code>
+        <p>
+          The result is a hash with two keys. One key for the numbers that failed the conditional statement and are odd (the "false" key), and the other group which passed the conditional statement and are even (the "true" key).
+        </p>
 
+        <p>
+          Group by can be used for more than just true/false conditions. If you wanted to group that same array of numbers, by their remainder when divided by 3, group_by can be used for that as well.
+        </p>
+
+        <code>
           <p>
-            The result is a hash with two keys. One key for the numbers that failed the conditional statement and are odd (the "false" key), and the other group which passed the conditional statement and are even (the "true" key).
+            <span>p numbers.group_by { |number| number%3 }</span>
+            <span>{1=>[1, 4], 2=>[2, 5], 0=>[3, 6]}</span>
           </p>
+        </code>
 
+        <p>
+          The result is a hash with the keys representing the remainder that each number had when divided by 3.
+        </p>
+
+        <p>
+          Now for a some what real world example. Say you were in the HR department of your company, and you had to send a special thank you gift to all the employees that served the company for 5 or more years. You could use group by on a hash that contains the employee names, and their years of service to the company.
+        </p>
+
+        <code>
           <p>
-            Group by can be used for more than just true/false conditions. If you wanted to group that same array of numbers, by their remainder when divided by 3, group_by can be used for that as well.
+            <span>employees = {"Jody Greene" => 5,</span>
+            <span>"Erik Sanchez" => 2,</span>
+            <span>"Ethel Hogan" => 3,</span>
+            <span>"Jake Soto" => 10,</span>
+            <span>"Sammy Burns" => 7,</span>
+            <span>"Percy Morgan" => 1,</span>
+            <span>"Merle Patrick" => 6,</span>
+            <span>"Tracy Gill" => 4,</span>
+            <span>"Carl Adkins" => 2,</span>
+            <span>"Laura Wagner" => 3}</span>
+            <br />
+            <span>employees.group_by { |years| years >= 5 }</span>
+            <br />
+            <span>{true=>[["Jody Greene", 5],</span>
+            <span>["Jake Soto", 10],</span>
+            <span>["Sammy Burns", 7],</span>
+            <span>["Merle Patrick", 6]],</span>
+            <br />
+            <span>false=>[["Erik Sanchez", 2],</span>
+            <span>["Ethel Hogan", 3],</span>
+            <span>["Percy Morgan", 1],</span>
+            <span>["Tracy Gill", 4],</span>
+            <span>["Carl Adkins", 2],</span>
+            <span>["Laura Wagner", 3]]}</span>
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>p numbers.group_by { |number| number%3 }</span>
-              <span>{1=>[1, 4], 2=>[2, 5], 0=>[3, 6]}</span>
-            </p>
-          </code>
+        <p>
+          The result is a hash with two keys, one for the group that has worked for 5 or more years (the "true" key) and the group that hasn't (the "false" key). Each of those keys contain an array of arrays, containing the employee's name and years of service.
+        </p>
+      </section>
+    </main>
 
-          <p>
-            The result is a hash with the keys representing the remainder that each number had when divided by 3.
-          </p>
-
-          <p>
-            Now for a some what real world example. Say you were in the HR department of your company, and you had to send a special thank you gift to all the employees that served the company for 5 or more years. You could use group by on a hash that contains the employee names, and their years of service to the company.
-          </p>
-
-          <code>
-            <p>
-              <span>employees = {"Jody Greene" => 5,</span>
-              <span>"Erik Sanchez" => 2,</span>
-              <span>"Ethel Hogan" => 3,</span>
-              <span>"Jake Soto" => 10,</span>
-              <span>"Sammy Burns" => 7,</span>
-              <span>"Percy Morgan" => 1,</span>
-              <span>"Merle Patrick" => 6,</span>
-              <span>"Tracy Gill" => 4,</span>
-              <span>"Carl Adkins" => 2,</span>
-              <span>"Laura Wagner" => 3}</span>
-              <br />
-              <span>employees.group_by { |years| years >= 5 }</span>
-              <br />
-              <span>{true=>[["Jody Greene", 5],</span>
-              <span>["Jake Soto", 10],</span>
-              <span>["Sammy Burns", 7],</span>
-              <span>["Merle Patrick", 6]],</span>
-              <br />
-              <span>false=>[["Erik Sanchez", 2],</span>
-              <span>["Ethel Hogan", 3],</span>
-              <span>["Percy Morgan", 1],</span>
-              <span>["Tracy Gill", 4],</span>
-              <span>["Carl Adkins", 2],</span>
-              <span>["Laura Wagner", 3]]}</span>
-            </p>
-          </code>
-
-          <p>
-            The result is a hash with two keys, one for the group that has worked for 5 or more years (the "true" key) and the group that hasn't (the "false" key). Each of those keys contain an array of arrays, containing the employee's name and years of service.
-          </p>
-        </section>
-      </main>
-
-      <footer>
-          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
-          <a href="https://github.com/shmartin">GitHub</a>|
-          <a href="https://twitter.com/sheld0ri">Twitter</a>|
-          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
-          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
-      </footer>
-    </div>
+    <footer>
+      <a href="mailto:sheld0ri@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+      <a href="https://github.com/shmartin"><i class="fa fa-github-square fa-2x"></i></a>
+      <a href="https://twitter.com/sheld0ri"><i class="fa fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.facebook.com/sheldon.martin.397"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    </footer>
   </body>
 </html>

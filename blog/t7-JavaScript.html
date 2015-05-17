@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Sheldon's Blog</title>
@@ -6,99 +6,98 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-code.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/t6-oop-concepts.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div id="container">
-      <nav>
-        <a href="index.html">About Me</a>
-        <a href="blog/index.html">Blog</a>  
-        <a href="#">Projects</a>
-      </nav>
+    <nav>
+      <a href="../index.html">About Me</a>
+      <a href="index.html">Blog</a>  
+      <a href="../projects.html">Projects</a>
+    </nav>
 
-      <main>
-        <h1>Ruby Classes vs JavaScript Constructors</h1>
-        <h2><!-- Sub-Title --></h2>
-        <h4 id="date">2015-04-02</h4>
+    <main>
+      <h1>Ruby Classes vs JavaScript Constructors</h1>
+      <h2><!-- Sub-Title --></h2>
+      <h4 id="date">2015-04-02</h4>
 
-        <section>
+      <section>
+        <p>
+         Ruby is a class based object oriented language. This means you can create classes which act as blueprints for your objects. Although you don't have to use a class to create your own object, you are better off doing so if you need to create more than one of the same object. A simple class might look like this:
+        </p>
+
+        <code>
           <p>
-           Ruby is a class based object oriented language. This means you can create classes which act as blueprints for your objects. Although you don't have to use a class to create your own object, you are better off doing so if you need to create more than one of the same object. A simple class might look like this:
+            <span>class MyClass</span>
+            <span class="indent1">@@var_1 = 1</span>
+            <span class="indent1">def initialize(var_2)</span>
+            <span class="indent2">@var_2 = var_2</span>
+            <span class="indent1">end</span>
+            <span>end</span>  
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>class MyClass</span>
-              <span class="indent1">@@var_1 = 1</span>
-              <span class="indent1">def initialize(var_2)</span>
-              <span class="indent2">@var_2 = var_2</span>
-              <span class="indent1">end</span>
-              <span>end</span>  
-            </p>
-          </code>
+        <p>
+          At the top of the class I've placed a class variable (you know it's a class variable because it has a double @), followed by an initialize method, which is run when an instance of the class is created. Inside the initialize method is an instance variable. A separate version of the instance variable is created for each instance of a class. However, a class variable belongs to the class itself, and only one version of it exist. To create an instance of a class, you assign a variable to the class name and call it's "new" method.
+        </p>
 
+        <code>
           <p>
-            At the top of the class I've placed a class variable (you know it's a class variable because it has a double @), followed by an initialize method, which is run when an instance of the class is created. Inside the initialize method is an instance variable. A separate version of the instance variable is created for each instance of a class. However, a class variable belongs to the class itself, and only one version of it exist. To create an instance of a class, you assign a variable to the class name and call it's "new" method.
+            <span>class MyClass</span>
+            <span class="indent1">@@var_1 = 1</span>
+            <span class="indent1">def initialize(var_2)</span>
+            <span class="indent2">@var_2 = var_2</span>
+            <span class="indent1">end</span>
+            <span>end</span>
+            <br />
+            <span>object_1 = MyClass.new(1)</span>
+            <span>object_2 = MyClass.new(2)</span>
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>class MyClass</span>
-              <span class="indent1">@@var_1 = 1</span>
-              <span class="indent1">def initialize(var_2)</span>
-              <span class="indent2">@var_2 = var_2</span>
-              <span class="indent1">end</span>
-              <span>end</span>
-              <br />
-              <span>object_1 = MyClass.new(1)</span>
-              <span>object_2 = MyClass.new(2)</span>
-            </p>
-          </code>
+        <p>
+         In JavaScript there are no classes, there are only objects. To create objects in a way similar to a Ruby class, you use a constructor. A simple JavaScript constructor might look like this:
+        </p>
 
+        <code>
           <p>
-           In JavaScript there are no classes, there are only objects. To create objects in a way similar to a Ruby class, you use a constructor. A simple JavaScript constructor might look like this:
+            <span>function myClass(var1, var2) {</span>
+            <span class="indent1">this.var1 = var1;</span>
+            <span class="indent1">this.var2 = var2;</span>
+            <span>}</span>
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>function myClass(var1, var2) {</span>
-              <span class="indent1">this.var1 = var1;</span>
-              <span class="indent1">this.var2 = var2;</span>
-              <span>}</span>
-            </p>
-          </code>
+        <p>
+          Once you create a JavaScript constructor, you can then create instances of it, similar to how you'd create instances of a class in Ruby:
+        </p>
 
+        <code>
           <p>
-            Once you create a JavaScript constructor, you can then create instances of it, similar to how you'd create instances of a class in Ruby:
+            <span>function myClass(var1, var2) {</span>
+            <span class="indent1">this.var1 = var1;</span>
+            <span class="indent1">this.var2 = var2;</span>
+            <span>}</span>
+            <br />
+            <span>var object1 = new myClass(1,2);</span>
+            <span>var object2 = new myClass(3,4);</span>
           </p>
+        </code>
 
-          <code>
-            <p>
-              <span>function myClass(var1, var2) {</span>
-              <span class="indent1">this.var1 = var1;</span>
-              <span class="indent1">this.var2 = var2;</span>
-              <span>}</span>
-              <br />
-              <span>var object1 = new myClass(1,2);</span>
-              <span>var object2 = new myClass(3,4);</span>
-            </p>
-          </code>
+        <p>
+          Because JavaScript doesn't have any classes there are no class variables either, only instance variables. These differences make JavaScript easier in some ways because of it's simplicity. However, this comes at a cost. Ruby has built-in encapsulation, variables are hidden from the outside by default, and only accessible through method calls. This is not the same in JavaScript, object properties can be accessed freely from outside the class. To get encapsulation in JavaScript, you'd have to put in more work since, it's not built into the language. So far in my experience, it seems writing good JavaScript is harder than writing good Ruby. However, I'm still learning both so in time we'll see if this holds up.
+        </p>
+      </section>
+    </main>
 
-          <p>
-            Because JavaScript doesn't have any classes there are no class variables either, only instance variables. These differences make JavaScript easier in some ways because of it's simplicity. However, this comes at a cost. Ruby has built-in encapsulation, variables are hidden from the outside by default, and only accessible through method calls. This is not the same in JavaScript, object properties can be accessed freely from outside the class. To get encapsulation in JavaScript, you'd have to put in more work since, it's not built into the language. So far in my experience, it seems writing good JavaScript is harder than writing good Ruby. However, I'm still learning both so in time we'll see if this holds up.
-          </p>
-        </section>
-      </main>
-
-      <footer>
-          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
-          <a href="https://github.com/shmartin">GitHub</a>|
-          <a href="https://twitter.com/sheld0ri">Twitter</a>|
-          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
-          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
-      </footer>
-    </div>
+    <footer>
+      <a href="mailto:sheld0ri@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+      <a href="https://github.com/shmartin"><i class="fa fa-github-square fa-2x"></i></a>
+      <a href="https://twitter.com/sheld0ri"><i class="fa fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.facebook.com/sheldon.martin.397"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    </footer>
   </body>
 </html>

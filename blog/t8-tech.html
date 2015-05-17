@@ -4,55 +4,54 @@
     <title>Sheldon's Blog</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div id="container">
-      <nav>
-        <a href="../index.html">About Me</a>
-        <a href="index.html">Blog</a>  
-        <a href="../projects.html">Projects</a>
-      </nav>
+    <nav>
+      <a href="../index.html">About Me</a>
+      <a href="index.html">Blog</a>  
+      <a href="../projects.html">Projects</a>
+    </nav>
 
-      <main>
-        <h1>NoSQL Databases</h1>
-        <h4 id="date">2015-05-08</h4>
+    <main>
+      <h1>NoSQL Databases</h1>
+      <h4 id="date">2015-05-08</h4>
 
-        <section>
-          <p>
-            As someone who's worked a lot with relational databases, I've always wondered how NoSQL Databases worked. So for this blog post, I've chosen to do a little research and find out what they're all about.
-          </p>
+      <section>
+        <p>
+          As someone who's worked a lot with relational databases, I've always wondered how NoSQL Databases worked. So for this blog post, I've chosen to do a little research and find out what they're all about.
+        </p>
 
-          <p>
-            NoSQL databases started when there was a rise in the amount of data being stored by applications. Traditional SQL databases weren't made to handle the amount of data that needed to be stored. NoSQL databases were created to address this problem. Some of these advantages include:
-          </p>
+        <p>
+          NoSQL databases started when there was a rise in the amount of data being stored by applications. Traditional SQL databases weren't made to handle the amount of data that needed to be stored. NoSQL databases were created to address this problem. Some of these advantages include:
+        </p>
 
-          <h4>Storing Unstructured Data</h4>
-          <p>
-            With relational databases, you have to create a schema ahead of time. Let's say you wanted to store employee records in a table. You'd then need to figure out everything you need to know about employees, such as name, address, salary, start date, etc. Which is fine, until you need to add something that you forgot, or maybe a new feature was implemented in your application, and it needs additional employee information. You now need to update the schema before you can start inserting this new data. NoSQL databases on the other hand, were made to allow inserts without a predetermined schema. This makes it easy to start inserting new types of information, in your database.
-          </p>
+        <h4>Storing Unstructured Data</h4>
+        <p>
+          With relational databases, you have to create a schema ahead of time. Let's say you wanted to store employee records in a table. You'd then need to figure out everything you need to know about employees, such as name, address, salary, start date, etc. Which is fine, until you need to add something that you forgot, or maybe a new feature was implemented in your application, and it needs additional employee information. You now need to update the schema before you can start inserting this new data. NoSQL databases on the other hand, were made to allow inserts without a predetermined schema. This makes it easy to start inserting new types of information, in your database.
+        </p>
 
-          <h4>Auto Sharding</h4>
-          <p>
-            When creating a relational database, you need to store the entire database on a single server, to ensure that you can reliably access all of your data. As the server gets larger, you need to add more space to keep up with its size. This will eventually slow down query speed significantly. Alternatively, you can split the database into pieces, commonly referred to as shards. Each shard will have a portion of the database, and will sit on a separate server. You need to create software to manage and query multiple shards, which puts extra burden on the developers. NoSQL databases however, usually support auto-sharding. This means the database takes care of organizing and accessing the separate shards. From the developer's point of view, it looks like a single database. It makes things easier for the developer, and allows them to be less reliant on Database Administrators.
-          </p>
+        <h4>Auto Sharding</h4>
+        <p>
+          When creating a relational database, you need to store the entire database on a single server, to ensure that you can reliably access all of your data. As the server gets larger, you need to add more space to keep up with its size. This will eventually slow down query speed significantly. Alternatively, you can split the database into pieces, commonly referred to as shards. Each shard will have a portion of the database, and will sit on a separate server. You need to create software to manage and query multiple shards, which puts extra burden on the developers. NoSQL databases however, usually support auto-sharding. This means the database takes care of organizing and accessing the separate shards. From the developer's point of view, it looks like a single database. It makes things easier for the developer, and allows them to be less reliant on Database Administrators.
+        </p>
 
-          <h4>Conclusion</h4>
-          <p>
-            NoSQL databases have a lot of great advantages, but there are also some important disadvantages. NoSQL is still fairly new, so its use isn't as widespread as relational databases. This also means support and workers with skills in this area, will be harder to come by. Since NoSQL databases are generally open source projects, there generally isn't much standardization between the different implementations. Personally, I'd love to try using a NoSQL database. I'm sure it will also become a necessary skill, as they become more widely adopted.
-          </p>
-        </section>
-      </main>
+        <h4>Conclusion</h4>
+        <p>
+          NoSQL databases have a lot of great advantages, but there are also some important disadvantages. NoSQL is still fairly new, so its use isn't as widespread as relational databases. This also means support and workers with skills in this area, will be harder to come by. Since NoSQL databases are generally open source projects, there generally isn't much standardization between the different implementations. Personally, I'd love to try using a NoSQL database. I'm sure it will also become a necessary skill, as they become more widely adopted.
+        </p>
+      </section>
+    </main>
 
-      <footer>
-          <a href="mailto:sheld0ri@gmail.com">Email</a>|                               
-          <a href="https://github.com/shmartin">GitHub</a>|
-          <a href="https://twitter.com/sheld0ri">Twitter</a>|
-          <a href="https://www.facebook.com/sheldon.martin.397">Facebook</a>|
-          <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en">LinkedIn</a>
-      </footer>
-    </div>
+    <footer>
+      <a href="mailto:sheld0ri@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+      <a href="https://github.com/shmartin"><i class="fa fa-github-square fa-2x"></i></a>
+      <a href="https://twitter.com/sheld0ri"><i class="fa fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.facebook.com/sheldon.martin.397"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com/pub/sheldon-martin/27/44a/ba1/en"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    </footer>
   </body>
 </html>
